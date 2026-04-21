@@ -5,11 +5,9 @@
 }
 
 body {
-  min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.25), transparent 30%),
-    linear-gradient(180deg, #e3f2fd 0%, #bbdefb 45%, #90caf9 100%);
-  color: #1f2937;
+    linear-gradient(to bottom, #9db4c0 0%, #c7d3d4 100%);
+  min-height: 100vh;
 }
 
 #root {
