@@ -9,8 +9,7 @@ function TarjetaPokemon({ pokemon }) {
 
   return (
     <div className="tarjeta-pokemon">
-      <h2>{capitalizarTexto(pokemon.name)}</h2>
-
+<h2>#{pokemon.id} {capitalizarTexto(pokemon.name)}</h2>
       <img src={pokemon.sprites.front_default} alt={pokemon.name} />
 
       <p><strong>ID:</strong> {pokemon.id}</p>

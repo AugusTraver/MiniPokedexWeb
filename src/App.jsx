@@ -119,31 +119,100 @@ function App() {
   };
 
   return (
-    <div className="contenedor">
-      <h1>Mini Pokédex</h1>
+    <div className="app-fondo">
+      <div className="pokedex-shell">
+        <div className="pokedex-topbar">
+          <div className="topbar-left">
+            <div className="luz-principal">
+              <span className="luz-principal-brillo"></span>
+            </div>
 
-      <section className="seccion">
-        <h2>Búsqueda de Pokémon</h2>
-        <Buscador onBuscar={buscarPokemon} />
-        <button className="boton-error" onClick={probarError}>
-          Probar error intencional
-        </button>
-      </section>
+            <div className="luces-secundarias">
+              <span className="luz-chip chip-rojo"></span>
+              <span className="luz-chip chip-amarillo"></span>
+              <span className="luz-chip chip-verde"></span>
+            </div>
+          </div>
 
-      {loading && <Cargando />}
-      <ErrorMensaje mensaje={error} />
-      <TarjetaPokemon pokemon={pokemonBuscado} />
+          <div className="marca-pokedex">
+            <span>POKÉDEX</span>
+          </div>
+        </div>
 
-      <section className="seccion">
-        <h2>Lista de Pokémon</h2>
-        <Filtros
-          filtroNombre={filtroNombre}
-          setFiltroNombre={setFiltroNombre}
-          filtroTipo={filtroTipo}
-          setFiltroTipo={setFiltroTipo}
-        />
-        <ListaPokemon lista={listaFiltrada} />
-      </section>
+        <div className="pokedex-marco">
+          <div className="pantalla-panel">
+            <div className="pantalla-header">
+              <span className="pantalla-led"></span>
+              <span className="pantalla-led"></span>
+              <span className="pantalla-label">Sistema de búsqueda</span>
+            </div>
+
+            <div className="pantalla-display">
+              <div className="contenedor">
+                <h1>Mini Pokédex</h1>
+
+                <section className="seccion">
+                  <h2>Búsqueda de Pokémon</h2>
+                  <Buscador onBuscar={buscarPokemon} />
+                  <button className="boton-error" onClick={probarError}>
+                    Probar error intencional
+                  </button>
+                </section>
+
+                {loading && <Cargando />}
+                <ErrorMensaje mensaje={error} />
+                <TarjetaPokemon pokemon={pokemonBuscado} />
+
+                <section className="seccion">
+                  <h2>Lista de Pokémon</h2>
+                  <Filtros
+                    filtroNombre={filtroNombre}
+                    setFiltroNombre={setFiltroNombre}
+                    filtroTipo={filtroTipo}
+                    setFiltroTipo={setFiltroTipo}
+                  />
+                  <ListaPokemon lista={listaFiltrada} />
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div className="panel-controles">
+            <div className="controles-fila">
+              <div className="boton-circular boton-azul"></div>
+
+              <div className="controles-derecha">
+                <div className="switch-horizontal">
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div className="rejilla-audio">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+
+            <div className="controles-fila inferior">
+              <div className="cruceta">
+                <span className="cruceta-vertical"></span>
+                <span className="cruceta-horizontal"></span>
+                <span className="cruceta-centro"></span>
+              </div>
+
+              <div className="botones-accion">
+                <span className="accion accion-rojo"></span>
+                <span className="accion accion-verde"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="detalle-inferior"></div>
+      </div>
     </div>
   );
 }

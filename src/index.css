@@ -4,12 +4,12 @@
   padding: 0;
 }
 
-body {
-  background:
-    linear-gradient(to bottom, #9db4c0 0%, #c7d3d4 100%);
-  min-height: 100vh;
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
-#root {
-  min-height: 100vh;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

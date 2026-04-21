@@ -3,9 +3,9 @@ import { capitalizarTexto } from "../utils/formateadores";
 function ListaPokemon({ lista }) {
   return (
     <div className="lista-pokemon">
-      {lista.map((pokemon) => (
+      {lista.map((pokemon, index) => (
         <div className="item-pokemon" key={pokemon.name}>
-          <p>{capitalizarTexto(pokemon.name)}</p>
+          <p>#{index + 1} {capitalizarTexto(pokemon.name)}</p>
         </div>
       ))}
     </div>
