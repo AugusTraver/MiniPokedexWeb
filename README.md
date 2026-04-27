@@ -1,16 +1,23 @@
-# React + Vite
+# Mini Pokédex Web 🔴
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web interactiva construida con React que simula la interfaz de una Pokédex clásica. Permite buscar, filtrar y visualizar información detallada de los Pokémon consumiendo los datos de la [PokéAPI](https://pokeapi.co/).
 
-Currently, two official plugins are available:
+## ✨ Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Búsqueda rápida:** Encuentra Pokémon por su nombre o por su número de ID.
+- **Filtrado dinámico:** Filtra la lista de Pokémon en pantalla por texto (nombre) o seleccionando su tipo (Fuego, Agua, Planta, Eléctrico, etc.).
+- **Detalles del Pokémon:** Visualización de la imagen oficial (sprite), ID, tipos, peso (en kg) y altura (en m).
+- **Interfaz inmersiva:** Diseño visual trabajado puramente en CSS que recrea la carcasa física de una Pokédex, incluyendo luces, botones y pantallas.
+- **Manejo de estados:** Indicadores de carga (Loading) y sistema de manejo de errores, incluyendo un botón dedicado para probar el comportamiento de la aplicación ante fallos de red.
 
-## React Compiler
+## 🚀 Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Core:** React 19, JavaScript, HTML5, CSS3.
+- **Herramienta de construcción:** Vite.
+- **Datos:** Fetch API (PokéAPI).
 
-## Expanding the ESLint configuration
+## 🛠️ Instalación y uso local
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/augustraver/minipokedexweb
